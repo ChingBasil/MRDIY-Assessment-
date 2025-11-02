@@ -1,9 +1,0 @@
-CREATE TABLE sales_raw (
-    month DATE,
-    product VARCHAR(50),
-    store_code VARCHAR(10),
-    category VARCHAR(50),
-    sales_qty INT,
-    sales_amt DECIMAL(10,2),
-    sales_cost DECIMAL(10,2)
-);
