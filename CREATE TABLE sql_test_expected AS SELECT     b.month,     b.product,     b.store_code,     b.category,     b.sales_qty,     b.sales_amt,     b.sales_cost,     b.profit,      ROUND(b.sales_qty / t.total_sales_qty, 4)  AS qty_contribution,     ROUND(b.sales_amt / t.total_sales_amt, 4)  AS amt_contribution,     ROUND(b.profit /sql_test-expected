@@ -1,0 +1,20 @@
+CREATE TABLE sql_test-expected AS
+SELECT
+    b.month,
+    b.product,
+    b.store_code,
+    b.category,
+    b.sales_qty,
+    b.sales_amt,
+    b.sales_cost,
+    b.profit,
+
+    ROUND(b.sales_qty / t.total_sales_qty, 4)  AS qty_contribution,
+    ROUND(b.sales_amt / t.total_sales_amt, 4)  AS amt_contribution,
+    ROUND(b.profit / t.total_profit, 4)        AS profit_contribution
+
+FROM sales_base b
+JOIN category_totals t
+  ON b.month = t.month
+ AND b.category = t.category
+ORDER BY b.month, b.category, b.product;
