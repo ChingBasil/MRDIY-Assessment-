@@ -1,0 +1,10 @@
+CREATE TABLE category_totals AS
+SELECT
+    month,
+    category,
+    SUM(sales_qty)  AS total_sales_qty,
+    SUM(sales_amt)  AS total_sales_amt,
+    SUM(sales_cost) AS total_sales_cost,
+    SUM(profit)     AS total_profit
+FROM sales_base
+GROUP BY month, category;
