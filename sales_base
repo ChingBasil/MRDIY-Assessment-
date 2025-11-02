@@ -1,0 +1,11 @@
+CREATE TABLE sales_base AS
+SELECT
+    month,
+    product,
+    store_code,
+    category,
+    sales_qty,
+    sales_amt,
+    sales_cost,
+    (sales_amt - sales_cost) AS profit
+FROM sales_raw;
