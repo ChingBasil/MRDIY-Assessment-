@@ -26,7 +26,7 @@
 
 ~ Open excel_sample_data_de in project directory.
 
-~ Run "data_transform.py" 
+~ Run "data_transform.py" located in folder "Python Script".
 
 ~ The output of the validation summary should be displayed. 
 
